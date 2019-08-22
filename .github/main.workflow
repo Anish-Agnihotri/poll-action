@@ -1,9 +1,9 @@
 workflow "Poll" {
   on = "issue_comment"
-  resolves = "Poll"
+  resolves = "poll-action"
 }
 
-action "Poll" {
+action "poll-action" {
   uses = "docker://anish-agnihotri/poll-action:latest"
   secrets = ["GITHUB_TOKEN"]
 }
