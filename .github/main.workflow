@@ -4,6 +4,6 @@ workflow "Poll" {
 }
 
 action "poll-action" {
-  uses = "docker://anish-agnihotri/poll-action:latest"
+  uses = "anish-agnihotri/poll-action@master"
   secrets = ["GITHUB_TOKEN"]
 }
