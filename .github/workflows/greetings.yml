@@ -1,0 +1,12 @@
+name: Poll
+
+on: [issue_comment]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run poll-action
+      uses: anish-agnihotri/poll-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
